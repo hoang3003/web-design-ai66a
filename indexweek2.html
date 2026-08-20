@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+</head>
+
+<body>
+    <nav class="toc" aria-label="Mục lục">
+        <strong>Mục lục:</strong>
+        <a href="#profile">Giới thiệu</a>
+        <a href="#website">Website</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="https://www.vjol.info/wp-content/uploads/2025/12/anh-da-den-meme-cot-toc.jpg" width="300" alt="Ảnh Google">
+    </a>
+
+    <h1 style="color: red;" id="profile">My Profile</h1>
+
+    <p>
+        Xin chào! Tôi là Minh Hoàng, hiện đang là sinh viên ngành Trí tuệ nhân tạo.
+    </p>
+
+    <p>
+        Tôi đang học HTML, CSS, JavaScript và các công nghệ liên quan đến phát triển web.
+        Mục tiêu của tôi là trở thành một lập trình viên trong tương lai.
+    </p>
+
+    <h2 id="website">My Website</h2>
+
+    <a href="https://www.google.com" target="_blank">
+        Truy cập Google
+    </a>
+
+    <h2 id="skills">My Skills</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>SQL</li>
+    </ul>
+
+    <main>
+        <section id="skills-table">
+            <h2>Bảng Kỹ Năng</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <caption>Danh sách kỹ năng và trình độ</caption>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Kỹ năng</th>
+                        <th>Trình độ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>HTML</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>CSS</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>JavaScript</td>
+                        <td>Beginner</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Ghi chú: </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="/predict" method="post" novalidate>
+                <div class="row">
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" required>
+                </div>
+                <div class="row">
+                    <label for="contact-age">Age</label>
+                    <input id="contact-age" name="age" type="number" min="0">
+                </div>
+                <div class="row">
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" required>
+                </div>
+                <div class="row">
+                    <label for="contact-city">City</label>
+                    <select id="contact-city" name="city">
+                        <option value="">-- Chọn tỉnh/thành --</option>
+                        <option value="hn">Hanoi</option>
+                        <option value="hcm">Ho Chi Minh</option>
+                        <option value="dn">Da Nang</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </fieldset>
+                <div class="row">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
