@@ -1,0 +1,100 @@
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	color: red;
+	font-size: 1.5cm;
+}
+
+.highlight {
+	background-color: yellow;
+	color: #333;
+}
+
+#main-header {
+	color: red;
+	font-size: 2cm;
+}
+
+h2 {
+	color: orange;
+	font-size: 1cm;
+
+}
+
+.toc {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+.toc a {
+	color: green;
+}
+
+.toc a:hover {
+    color: yellow;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 8px;
+}
+
+.contact-form {
+	max-width: 400px;
+}
+
+.row {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.row label {
+	min-width: 70px;
+}
+
+.dashboard {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.card {
+	flex: 1 1 200px;
+	padding: 20px;
+	border: 5px solid #1f4e79;
+	border-radius: 15px;
+	background-color: #f2f7fb;
+}
+
+.card h3,
+.card p {
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.dashboard {
+		flex-direction: column;
+	}
+
+	.card {
+		flex-basis: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.card {
+		padding: 12px;
+	}
+}
