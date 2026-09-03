@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Management</title>
+	<link rel="stylesheet" href="week5.css">
+</head>
+<body>
+	<main class="page">
+		<header class="page-header">
+			<h1>User Management</h1>
+		</header>
+
+		<section class="table-wrap" aria-label="User list">
+			<button class="fetch-button" id="fetch-users" type="button">Fetch Users</button>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Email</th>
+						<th>Website</th>
+                        <th>Address</th>
+					</tr>
+				</thead>
+				<tbody id="user-table-body"></tbody>
+			</table>
+		</section>
+	</main>
+	<script src="week5.js"></script>
+</body>
+</html>
