@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tra cứu điểm thi THPT</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="app.js" defer></script>
+
+    <nav class="toc" aria-label="Mục lục">
+        <strong>Tra cứu điểm:</strong>
+        <a href="#lookup">Tra cứu</a>
+        <a href="#result">Kết quả</a>
+        <a href="#subjects">Bảng điểm</a>
+    </nav>
+
+    <header>
+        <h1 id="main-header">Tra cứu điểm thi THPT</h1>
+        <p>Nhập số báo danh để xem kết quả thi tốt nghiệp THPT.</p>
+    </header>
+
+    <main>
+        <section id="lookup" class="lookup-panel">
+            <h2>Thông tin tra cứu</h2>
+            <form id="score-form" class="contact-form">
+                <div class="row">
+                    <label for="registration-number">Số báo danh</label>
+                    <input id="registration-number" name="registrationNumber" type="text" placeholder="Ví dụ: 010001" required>
+                </div>
+                <div class="row">
+                    <label for="exam-year">Năm thi</label>
+                    <select id="exam-year" name="examYear">
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <button type="submit" class="highlight">Tra cứu điểm</button>
+                </div>
+                <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="result" class="result-section" aria-live="polite" hidden>
+            <h2>Kết quả của <span id="student-name"></span></h2>
+            <section class="dashboard" aria-label="Thông tin tổng quan">
+                <div class="card"><h3>Số báo danh</h3><p id="result-registration-number"></p></div>
+                <div class="card"><h3>Tổng điểm</h3><p id="total-score"></p></div>
+                <div class="card"><h3>Điểm trung bình</h3><p id="average-score"></p></div>
+                <div class="card"><h3>Xếp loại</h3><p id="classification"></p></div>
+            </section>
+        </section>
+
+        <section id="subjects" class="score-table-section" hidden>
+            <h2>Bảng điểm chi tiết</h2>
+            <table>
+                <caption>Điểm các môn thi tốt nghiệp THPT</caption>
+                <thead>
+                    <tr><th>STT</th><th>Môn thi</th><th>Điểm</th></tr>
+                </thead>
+                <tbody id="score-table-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
