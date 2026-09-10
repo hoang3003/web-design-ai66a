@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự đoán giá nhà</title>
+</head>
+<body>
+    <h1>Dự đoán giá nhà</h1>
+
+    <form id="house-form">
+        <label for="area">Diện tích</label>
+        <input id="area" name="area" type="text" inputmode="decimal" required>
+        <br>
+        <br>
+
+        <label for="bedrooms">Số phòng ngủ</label>
+        <input id="bedrooms" name="bedrooms" type="number" required>
+        <br>
+        <br>
+
+        <label for="location">Khu vực</label>
+        <select id="location" name="location">
+            <option value="other">Khác</option>
+            <option value="hanoi">Hà Nội</option>
+            <option value="hcmc">TP. Hồ Chí Minh</option>
+        </select>
+        <br>
+        <br>
+
+        <button type="submit">Dự đoán</button>
+    </form>
+
+    <p id="result">Kết quả sẽ hiển thị ở đây.</p>
+
+    <script>
+        const form = document.querySelector('#house-form');
+        const result = document.querySelector('#result');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const area = document.querySelector('#area').value;
+            const bedrooms = document.querySelector('#bedrooms').value;
+            const location = document.querySelector('#location').value;
+
+            try {
+                const response = await fetch(`/predict?area=${area}&bedrooms=${bedrooms}&location=${location}`);
+
+                if (!response.ok) {
+                    throw new Error('Không thể lấy kết quả.');
+                }
+
+                const data = await response.json();
+                result.textContent = `Giá dự đoán: ${data.predicted_price.toLocaleString('vi-VN')} VND`;
+            } catch (error) {
+                result.textContent = error.message;
+            }
+        });
+    </script>
+</body>
+</html>
