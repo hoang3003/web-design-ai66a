@@ -1,29 +1,31 @@
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Trebuchet MS", Arial, sans-serif;
 	line-height: 1.6;
 	max-width: 900px;
 	margin: 0 auto;
 	padding: 20px;
+	color: #17324d;
+	background: #f5f8fb;
 }
 
 h1 {
-	color: red;
-	font-size: 1.5cm;
+	color: #1f4e79;
+	font-size: 2.2rem;
 }
 
 .highlight {
-	background-color: yellow;
-	color: #333;
+	background-color: #f0a202;
+	color: #17212b;
 }
 
 #main-header {
-	color: red;
-	font-size: 2cm;
+	color: #1f4e79;
+	font-size: 2.2rem;
 }
 
 h2 {
-	color: orange;
-	font-size: 1cm;
+	color: #1f4e79;
+	font-size: 1.4rem;
 
 }
 
@@ -34,20 +36,95 @@ h2 {
 }
 
 .toc a {
-	color: green;
+	color: #1f6f78;
 }
 
 .toc a:hover {
-    color: yellow;
+	color: #f07818;
+}
+
+header,
+.lookup-panel,
+.result-section,
+.score-table-section {
+	margin-bottom: 24px;
+}
+
+.lookup-panel,
+.result-section,
+.score-table-section {
+	padding: 20px;
+	border: 1px solid #d6e2ec;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+.lookup-panel h2,
+.result-section h2,
+.score-table-section h2 {
+	margin-top: 0;
+}
+
+input,
+select,
+button {
+	font: inherit;
+	padding: 9px 12px;
+	border: 1px solid #9db5c9;
+	border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+	outline: 2px solid #f0a202;
+	outline-offset: 1px;
+}
+
+button {
+	cursor: pointer;
+	font-weight: bold;
+	border: 0;
+}
+
+button:hover {
+	filter: brightness(0.95);
+}
+
+.form-message {
+	min-height: 1.6em;
+	margin: 0;
+	font-weight: bold;
+}
+
+.form-message.error {
+	color: #b42318;
+}
+
+.form-message.success {
+	color: #1d6b4f;
 }
 
 table {
 	border-collapse: collapse;
+	width: 100%;
+	background-color: #ffffff;
 }
 
 th,
 td {
 	padding: 8px;
+	border: 1px solid #c5d4df;
+	text-align: left;
+}
+
+th {
+	color: #ffffff;
+	background-color: #1f4e79;
+}
+
+td:last-child,
+th:last-child {
+	text-align: center;
 }
 
 .contact-form {
@@ -62,6 +139,11 @@ td {
 
 .row label {
 	min-width: 70px;
+}
+
+.row input,
+.row select {
+	flex: 1;
 }
 
 .dashboard {
@@ -94,6 +176,19 @@ td {
 }
 
 @media (max-width: 480px) {
+	body {
+		font-size: 0.95rem;
+	}
+
+	.row {
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.row label {
+		min-width: 0;
+	}
+
 	.card {
 		padding: 12px;
 	}
